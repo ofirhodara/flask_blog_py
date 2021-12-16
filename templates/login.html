@@ -22,13 +22,25 @@
                     {{form.password(class="form-control form-control-lg")}}
                 </div>
             </fieldset>
-            <div class="form-group">
-                {{form.submit(class="btn  btn-outline-info ")}}
+
+            <div class="form-check">
+                {{form.remember(class="form-check-input")}} 
+                <br> 
+                {{form.remember.label(class="form-check-input")}} 
             </div>
+            <br> <br>  
+
+            <div class="form-group">
+                {{form.submit(class="btn  btn-outline-info")}}
+            </div>
+            
+            <small class="text-muted ml-2">
+                <a href="#">Reset my password</a>
+            </small>
     </form>
   </div>
  
-<!-- Go to register -->
+    <!-- Go to register -->
     <div class="border-top pt-2">
         <small class="text-muted">
         Don't Have an Account yet? 
