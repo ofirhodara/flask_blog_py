@@ -1,24 +1,14 @@
-from datetime import timedelta
-from enum import unique
-from flask import Flask, render_template, url_for, flash, redirect
-from flask_wtf import form
-from forms import RegistrationForm, LoginForm
-from flask_sqlalchemy import SQLAlchemy
-
-app = Flask(__name__)
-
-db = SQLAlchemy(app)
-
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
-app.config['SECRET_KEY'] = '2002ofirhodaraSecretKey2002'
-
+from flask import render_template, url_for, flash, redirect
+from flaskblog import app
+from flaskblog.forms import RegistrationForm, LoginForm
+from flaskblog.models import User, Post
 
 posts = [
     {
         'author': 'Corey Schafer',
         'title': 'Blog Post 1',
         'content': 'First post content',
-        'date_posted': 'April 20, 2018'
+        'date_posted': 'April 20, 2018' 
     },
     {
         'author': 'Jane Doe',
@@ -60,7 +50,3 @@ def login():
         return redirect(url_for('home'))
     
     return render_template('login.html', title='Log in', form=login_form)
-
-
-if __name__ == '__main__':
-     app.run()

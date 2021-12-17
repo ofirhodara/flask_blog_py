@@ -1,8 +1,6 @@
-
-from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy.orm import backref
-from blog import db
 from datetime import datetime
+from flaskblog import db
+
 
 
 class User(db.Model):

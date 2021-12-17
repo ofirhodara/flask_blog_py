@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4a4ce4e9-78d2-4df6-b0b4-7ca355853999" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/FlaskBlog.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Ofir.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nav_bar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/layout.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="218mKSY61voitcj0RAkh2GHcSwf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ofir\PycharmProjects\FlaskBlog" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="blog" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FlaskBlog" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/blog.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.blog" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4a4ce4e9-78d2-4df6-b0b4-7ca355853999" name="Default Changelist" comment="" />
+      <created>1637331024619</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1637331024619</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1579" height="222" key="GridCell.Tab.0.bottom" timestamp="1637335629148">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1600.860@-1920.0.1920.1040" timestamp="1637331944361" />
+    <state width="1579" height="222" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1600.860@0.0.1600.860" timestamp="1637335629148" />
+    <state width="1579" height="222" key="GridCell.Tab.0.center" timestamp="1637335629148">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1600.860@-1920.0.1920.1040" timestamp="1637331944361" />
+    <state width="1579" height="222" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1600.860@0.0.1600.860" timestamp="1637335629148" />
+    <state width="1579" height="222" key="GridCell.Tab.0.left" timestamp="1637335629147">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1600.860@-1920.0.1920.1040" timestamp="1637331944360" />
+    <state width="1579" height="222" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1600.860@0.0.1600.860" timestamp="1637335629147" />
+    <state width="1579" height="222" key="GridCell.Tab.0.right" timestamp="1637335629148">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1600.860@-1920.0.1920.1040" timestamp="1637331944361" />
+    <state width="1579" height="222" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1600.860@0.0.1600.860" timestamp="1637335629148" />
+    <state x="380" y="165" key="IDE.errors.dialog" timestamp="1637332897259">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="380" y="165" key="IDE.errors.dialog/-1920.0.1920.1040/0.0.1600.860@0.0.1600.860" timestamp="1637332897259" />
+    <state x="424" y="131" key="SettingsEditor" timestamp="1637332572027">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="424" y="131" key="SettingsEditor/-1920.0.1920.1040/0.0.1600.860@0.0.1600.860" timestamp="1637332572027" />
+  </component>
+</project>
