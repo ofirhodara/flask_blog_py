@@ -1,5 +1,6 @@
 from flask import render_template, url_for, flash, redirect
-from flaskblog import app
+from wtforms.validators import Email
+from flaskblog import app, db, bcrypt
 from flaskblog.forms import RegistrationForm, LoginForm
 from flaskblog.models import User, Post
 
@@ -33,9 +34,17 @@ def about():
 @app.route("/register", methods=['GET', 'POST'])
 def register():
     register_form = RegistrationForm()
-
     if register_form.validate_on_submit():
-        flash(f'Account {register_form.username.data} Registered!')
+
+        hashed_pass = bcrypt.generate_password_hash(register_form.password.data).decode('utf-8')
+        user = User(username=register_form.username.data,
+                    password=hashed_pass, 
+                    email=register_form.email.data)
+        
+        db.session.add(user)
+        db.session.commit()
+
+        flash(f'Account {register_form.username.data} Registered! You are now able to log In!')
         return redirect(url_for('login'))
     
     return render_template('register.html', title='Register', form=register_form)
