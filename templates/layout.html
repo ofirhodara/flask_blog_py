@@ -18,16 +18,29 @@
 
     <ul>
         <li><a class="active" href="/">Home</a></li>
-        <li style="float:right"><a href="/about">About</a></li>
         <li><a href="#">Latests Posts</a></li>
         <li><a href="#">Calendars</a></li>
-        <li><a style="float:right" href="/register">Register</a></li>
-        <li><a style="float:right" href="/login">Log In</a></li>
+        <li><a href="/about">About</a></li>
+        <li style="float:right"><a  href="/register">Register</a></li>
+        <li style="float:right"><a  href="/login">Log In</a></li>
     </ul>
 
     
 
     <div class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {%if messages %}
+
+            <ul class=flashes>
+                {% for category, message in messages %}
+                  <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+
+            {%endif%}
+
+        {%endwith%}
+
         {% block content %}
         {% endblock%}
     </div>

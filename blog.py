@@ -1,5 +1,5 @@
 from datetime import timedelta
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, flash, redirect
 from flask_wtf import form
 from forms import RegistrationForm, LoginForm
 app = Flask(__name__)
@@ -37,12 +37,22 @@ def about():
 @app.route("/register", methods=['GET', 'POST'])
 def register():
     register_form = RegistrationForm()
+
+    if register_form.validate_on_submit():
+        flash(f'Account {register_form.username.data} Registered!')
+        return redirect(url_for('login'))
+    
     return render_template('register.html', title='Register', form=register_form)
 
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
     login_form = LoginForm()
+
+    if login_form.validate_on_submit():
+        flash(f'Account {login_form.email.data} is Logged in!')
+        return redirect(url_for('home'))
+    
     return render_template('login.html', title='Log in', form=login_form)
 
 
