@@ -1,11 +1,17 @@
 from datetime import timedelta
+from enum import unique
 from flask import Flask, render_template, url_for, flash, redirect
 from flask_wtf import form
 from forms import RegistrationForm, LoginForm
+from flask_sqlalchemy import SQLAlchemy
+
 app = Flask(__name__)
 
+db = SQLAlchemy(app)
 
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 app.config['SECRET_KEY'] = '2002ofirhodaraSecretKey2002'
+
 
 posts = [
     {
@@ -57,4 +63,4 @@ def login():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+     app.run()
