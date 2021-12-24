@@ -21,8 +21,14 @@
         <li><a href="#">Latests Posts</a></li>
         <li><a href="#">Calendars</a></li>
         <li><a href="/about">About</a></li>
+
+        {% if current_user.is_authenticated %}
+        <li style="float:right"><a  href="/logout">Log Out</a></li>
+        <li style="float:right"><a  href="/account">Account Page</a></li>
+        {% else %}
         <li style="float:right"><a  href="/register">Register</a></li>
         <li style="float:right"><a  href="/login">Log In</a></li>
+        {% endif %}
     </ul>
 
     

@@ -3,6 +3,7 @@ from wtforms.validators import Email
 from flaskblog import app, db, bcrypt
 from flaskblog.forms import RegistrationForm, LoginForm
 from flaskblog.models import User, Post
+from flask_login import login_manager, login_user, current_user, logout_user, login_required
 
 posts = [
     {
@@ -51,11 +52,31 @@ def register():
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
+    if current_user.is_authenticated:
+        return redirect(url_for('home'))
+
+
     login_form = LoginForm()
     if login_form.validate_on_submit():
         # checking our data base if the account details is suitable
-        
-        flash(f'Account {login_form.email.data} is Logged in!')
-        return redirect(url_for('home'))
+        user = User.query.filter_by(email=login_form.email.data).first()
+
+        if user and bcrypt.check_password_hash(user.password, login_form.password.data):
+            login_user(user, remember=login_form.remember.data)      
+            return redirect(url_for('home'))
+
+        flash(f'Login Unsuccessful, Please try Again...')
     
     return render_template('login.html', title='Log in', form=login_form)
+
+
+@app.route("/logout")
+def logout():
+    logout_user()
+    return redirect(url_for('home'))
+
+
+@app.route("/account")
+@login_required
+def account():
+     return render_template('account.html', title='Account')
