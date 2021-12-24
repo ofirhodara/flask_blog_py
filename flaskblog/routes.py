@@ -30,7 +30,6 @@ def home():
 def about():
     return render_template('about.html', title='About')
 
- # methods are the meethods allowrd in this route
 @app.route("/register", methods=['GET', 'POST'])
 def register():
     register_form = RegistrationForm()
@@ -53,8 +52,9 @@ def register():
 @app.route("/login", methods=['GET', 'POST'])
 def login():
     login_form = LoginForm()
-
     if login_form.validate_on_submit():
+        # checking our data base if the account details is suitable
+        
         flash(f'Account {login_form.email.data} is Logged in!')
         return redirect(url_for('home'))
     
