@@ -25,6 +25,8 @@ login_manager = LoginManager(app)
 # where is the log in route
 login_manager.login_view = 'login'
 
+# blue information alert 
+login_manager.login_message_category = 'info'
 
 @login_manager.user_loader
 def load_user(user_id):

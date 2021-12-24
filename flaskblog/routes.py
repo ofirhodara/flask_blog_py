@@ -1,4 +1,4 @@
-from flask import render_template, url_for, flash, redirect
+from flask import render_template, url_for, flash, redirect, request
 from wtforms.validators import Email
 from flaskblog import app, db, bcrypt
 from flaskblog.forms import RegistrationForm, LoginForm
@@ -62,8 +62,10 @@ def login():
         user = User.query.filter_by(email=login_form.email.data).first()
 
         if user and bcrypt.check_password_hash(user.password, login_form.password.data):
-            login_user(user, remember=login_form.remember.data)      
-            return redirect(url_for('home'))
+            login_user(user, remember=login_form.remember.data)    
+            next_page = request.args.get('next')
+            # if it is login_required
+            return redirect(next_page) if next_page else redirect(url_for('home'))
 
         flash(f'Login Unsuccessful, Please try Again...')
     
@@ -77,6 +79,7 @@ def logout():
 
 
 @app.route("/account")
+# in order to enter it log in required
 @login_required
 def account():
      return render_template('account.html', title='Account')
