@@ -1,4 +1,58 @@
 {% extends "layout.html"%}
 {% block content %}
-    <h1>{{ current_user.username }} Account Page:</h1>
+
+    <h2 style="text-align:center">Account Page:</h2>
+    <br>
+    <div class="card">
+        <img src="{{ profile_pic }}" style="width:100%">
+        <h1>{{ current_user.username }}</h1>
+        <p>{{ current_user.email }}</p>
+    </div>
+    <br><br>
+
+
+    
+        <form method="POST" action="">
+             <!-- used to protect the form against CSRF attacks --> 
+             {{ form.hidden_tag() }}
+               
+             <fieldset class="form-group">
+
+                 <div class="form-group">
+                     {{form.email.label(class="form-control-label")}}
+                   
+                     {% if form.email.errors %}
+                            {{form.email(class="form-control form-control-lg is-invalid")}}
+                            <div class="invalid-feedback">
+                                  {% for error in form.email.errors %}
+                                  <span> {{error}}</span>
+                                  {%endfor%}
+                            </div>
+                            
+                            {% else %}
+                            {{form.email(class="form-control form-control-lg")}}
+                            {%endif%}        
+                 </div>
+
+                 <div class="form-group">
+                  {{form.username.label(class="form-control-label")}}
+                   
+                     {% if form.username.errors %}
+                            {{form.username(class="form-control form-control-lg is-invalid")}}
+                            <div class="invalid-feedback">
+                                  {% for error in form.username.errors %}
+                                  <span> {{error}}</span>
+                                  {%endfor%}
+                            </div>                   
+                            {% else %}
+                            {{form.username(class="form-control form-control-lg")}}
+                            {%endif%}        
+                 </div>        
+             </fieldset>
+    
+             <div class="form-group">
+                 {{form.submit(class="btn  btn-outline-info")}}
+             </div>
+        </form>
+
 {% endblock content %}
